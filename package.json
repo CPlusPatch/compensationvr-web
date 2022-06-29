@@ -1,0 +1,72 @@
+{
+  "name": "cpluspatch-cms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@editorjs/delimiter": "^1.2.0",
+    "@editorjs/editorjs": "^2.25.0",
+    "@editorjs/header": "^2.6.2",
+    "@editorjs/image": "^2.6.2",
+    "@editorjs/list": "^1.7.0",
+    "@headlessui/react": "^1.6.5",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindui/react": "^0.1.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
+    "async": "^3.2.4",
+    "editorjs-blocks-react-renderer": "^1.2.4",
+    "express": "^4.18.1",
+    "firebase": "^9.8.4",
+    "nth-check": "^2.1.1",
+    "react": "^18.2.0",
+    "react-bootstrap-icons": "^1.8.4",
+    "react-dom": "^18.2.0",
+    "react-editor-js": "^2.0.6",
+    "react-scripts": "^5.0.1",
+    "slugify": "^1.6.5",
+    "typewriter-lite": "^1.1.2",
+    "uuid": "^8.3.2",
+    "windups": "^1.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@editorjs/code": "^2.7.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "editorjs-drag-drop": "^1.1.2",
+    "editorjs-undo": "^2.0.3",
+    "eslint": "^8.18.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.1",
+    "postcss": "^8.4.14",
+    "react-router-dom": "^6.3.0",
+    "tailwindcss": "^3.1.4",
+    "web-vitals": "^2.1.4"
+  }
+}
