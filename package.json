@@ -27,7 +27,6 @@
     "react-editor-js": "^2.0.6",
     "react-scripts": "^5.0.1",
     "slugify": "^1.6.5",
-    "typewriter-lite": "^1.1.2",
     "uuid": "^8.3.2",
     "windups": "^1.2.1"
   },
@@ -55,12 +54,16 @@
       "last 1 safari version"
     ]
   },
+  "overrides": {
+	"@svgr/webpack": "$@svgr/webpack"
+  },
   "devDependencies": {
     "@editorjs/code": "^2.7.0",
+    "@svgr/webpack": "^6.2.1",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "editorjs-drag-drop": "^1.1.2",
-    "editorjs-undo": "^2.0.3",
+    "editorjs-undo": "^2.0.4",
     "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.30.1",
