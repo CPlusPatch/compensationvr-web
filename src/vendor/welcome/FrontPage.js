@@ -1,8 +1,17 @@
 import React, { useEffect } from "react";
 import Navbar from "./navbar/Navbar";
 import itchIo from "../../static/itch-io.svg";
-import sidequest from "../../static/sidequest.png";
-import banner from "../../static/banner.png";
+import sidequest from "../../static/sidequest.webp";
+import banner from "../../static/banner.webp";
+import bobrobot1 from "../../static/bobrobot1.webp";
+import jai from "../../static/jai.webp";
+import keightie from "../../static/Keightie.webp";
+import leon from "../../static/leon-pfp.webp";
+import rose from "../../static/Rose932.webp";
+import zoey from "../../static/Zoey.webp";
+import ominousRose from "../../static/ominous-rose.webp"
+import friendlyRose from "../../static/friendly-rose.webp"
+import ravenMusk from "../../static/raven-musk.webp"
 import { ExternalLinkIcon } from '@heroicons/react/solid';
 
   
@@ -21,42 +30,42 @@ const people = [
 	  {
 		name: 'LeonInfinity',
 		role: 'In-Game Development, XR Controls, Networking',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fleon-pfp.webp?alt=media&token=f22a06bc-39e4-4fc8-ba4c-816238f4ee10",
+		imageUrl: leon,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Rose932',
 		role: 'In-Game Development, Creation Tools, API, XRUI, Web',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FRose932.webp?alt=media&token=4c0567f7-a8f7-45d0-a488-b45d30fbb7d2",
+		imageUrl: rose,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Bobrobot1',
 		role: 'CVRNet Development',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fbobrobot1.webp?alt=media&token=8972aa7d-d324-43b6-afe2-688f75f679e2",
+		imageUrl: bobrobot1,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Keightie',
 		role: 'XR Development',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FKeightie.webp?alt=media&token=30a7c5df-d4cf-4312-9fbf-288f0a749f77",
+		imageUrl: keightie,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'jai',
 		role: 'API Assistance, Kotlin',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fjai.webp?alt=media&token=da9d82a2-b3f9-4644-a54c-272efae04a5b",
+		imageUrl: jai,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Zoey',
 		role: 'API Development, Golang',
-		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FZoey.webp?alt=media&token=350e04c4-fda8-4e24-8e85-48d7a108142f",
+		imageUrl: zoey,
 		twitterUrl: '#',
 		discordUrl: '#',
 	  }
@@ -75,7 +84,7 @@ const blogPosts = [
 	'Major L today bozos, the main website just got DDOS\'d. We\'re not sure what happened, but we\'re pretty sure it was a bad thing.',
 	author: {
 		name: 'Johnny Sins',
-		imageUrl: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/53f39d5204bbe825cd56b4970f1bad64~c5_720x720.jpeg?x-expires=1656608400&x-signature=uE5Fw4KNEwIrnjErqXa2iwkdJ9A%3D',
+		imageUrl: leon,
 		href: '#',
 	},
 	readingLength: '6 min',
@@ -87,12 +96,12 @@ const blogPosts = [
 	date: 'May 21, 2022',
 	datetime: '2022-05-21',
 	category: { name: 'Article', href: '#' },
-	imageUrl: "https://parlersport.com/wp-content/uploads/2020/09/CS-GO-Trois-entraineurs-reconnus-coupables-dans-un-recent.jpg",
+	imageUrl: "https://cdn-images.win.gg/resize/w/620/format/webp/type/progressive/fit/cover/path/wp/uploads/2021/08/how-do-csgo-ranks-work-and-how-to-climb-the-ladder.jpg",
 	preview:
 	'TIME FOR MOTHERFUCKING GUNS IN CVR LETS FUCKING GOOOOOOO WHERE WE DROPPING BOYS',
 	author: {
 		name: 'Johnny Sins',
-		imageUrl: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/53f39d5204bbe825cd56b4970f1bad64~c5_720x720.jpeg?x-expires=1656608400&x-signature=uE5Fw4KNEwIrnjErqXa2iwkdJ9A%3D',
+		imageUrl: leon,
 		href: '#',
 	},
 	readingLength: '6 min',
@@ -104,11 +113,11 @@ const blogPosts = [
 	date: 'May 20, 2022',
 	datetime: '2022-05-20',
 	category: { name: 'Article', href: '#' },
-	imageUrl: "https://api.compensationvr.tk/img/5311",
+	imageUrl: ominousRose,
 	preview: "You'd better shut the fuck up man otherwise I'm gonna punch those VR teeth until your headset breaks. Don't try me mf.",
 	author: {
 		name: 'Johnny Sins',
-		imageUrl: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/53f39d5204bbe825cd56b4970f1bad64~c5_720x720.jpeg?x-expires=1656608400&x-signature=uE5Fw4KNEwIrnjErqXa2iwkdJ9A%3D',
+		imageUrl: leon,
 		href: '#',
 	},
 	readingLength: '6 min',
@@ -147,17 +156,17 @@ function MainBanner() {
 					game:</p>
 				<div className="flex justify-center w-full pb-24 md:justify-start lg:pb-0 fade-in glow">
 					<a href="https://leonto-gamer.itch.io/compensation-vr">
-						<img src={itchIo} alt="" className="h-12 pr-4 bounce-top-icons" />
+						<img fetchpriority="high" src={itchIo} alt="" className="h-12 pr-4 bounce-top-icons" />
 					</a>
 					<a href="https://sidequestvr.com/app/6232/compensation-vr">
-						<img src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fget-it-on-sidequest.webp?alt=media&token=5f7e102f-fd6c-4d84-b420-7ae810eb00bf" alt="" className="h-12 bounce-top-icons" />
+						<img fetchpriority="high" src={sidequest} alt="" className="h-12 bounce-top-icons" />
 					</a>
 				</div>
 
 			</div>
 
 			<div className="w-full overflow-y-hidden xl:w-3/5">
-				<img className="w-5/6 mx-auto lg:mr-0 slide-in-bottom" alt="" src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Frose-punching-you.webp?alt=media&token=d8382643-8447-464a-8919-61c68494acd3" />
+				<img fetchpriority="high" className="w-5/6 mx-auto lg:mr-0 slide-in-bottom" alt="" src={banner} />
 			</div>
 		</div>
 	);
@@ -178,8 +187,8 @@ function GamePresentation() {
 					</p>
 				</div>
 				<div className="mt-12">
-					<img className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-						src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Ffriendly-rose.webp?alt=media&token=47acff09-51ce-4411-9b26-986c554bdf77" alt="" />
+					<img loading="lazy" className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
+						src={friendlyRose} alt="" />
 				</div>
 			</div>
 		</div>
@@ -194,8 +203,8 @@ function Testimonials() {
 					<div aria-hidden="true" className="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden" />
 					<div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
 						<div className="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-							<img className="object-cover lg:h-full lg:w-full"
-								src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2F4ySdkyH.webp?alt=media&token=15bc0250-acd0-4b92-bc27-a98cc6fbde41" alt="" />
+							<img loading="lazy" className="object-cover lg:h-full lg:w-full"
+								src={ravenMusk} alt="" />
 						</div>
 					</div>
 				</div>
@@ -247,7 +256,7 @@ function Articles() {
 					{blogPosts.map((post) => (
 					<div key={post.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
 						<div className="flex-shrink-0">
-							<img className="object-cover w-full h-48" src={post.imageUrl} alt="" />
+							<img loading="lazy" className="object-cover w-full h-48" src={post.imageUrl} alt="" />
 						</div>
 						<div className="flex flex-col justify-between flex-1 p-6 bg-gray-800">
 							<div className="flex-1">
@@ -264,7 +273,7 @@ function Articles() {
 							<div className="flex items-center mt-6">
 								<div className="flex-shrink-0">
 									<a href={post.author.href}>
-										<img className="w-10 h-10 rounded-full" src={post.author.imageUrl}
+										<img loading="lazy" className="w-10 h-10 rounded-full" src={post.author.imageUrl}
 											alt={post.author.name} />
 									</a>
 								</div>
@@ -306,7 +315,7 @@ function TeamPresentation() {
 					<li key={person.name}>
 						<div className="space-y-4">
 							<div className="overflow-hidden bg-gray-800 rounded-lg aspect-w-3 aspect-h-2">
-								<img className="object-cover shadow-lg" src={person.imageUrl}
+								<img loading="lazy" className="object-cover shadow-lg" src={person.imageUrl}
 									alt="" />
 							</div>
 
@@ -351,7 +360,7 @@ function Support() {
 	return (
 		<div className="relative bg-gray-900 font-exo">
 			<div className="relative h-56 bg-indigo-600 rounded-md sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-				<img className="object-cover w-full h-full"
+				<img loading="lazy" className="object-cover w-full h-full"
 					src="https://static.boredpanda.com/blog/wp-content/uploads/2017/12/funny-weird-wtf-stock-photos-23-5a3bbbdb48827__700.jpg"
 					alt="" />
 			</div>

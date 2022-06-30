@@ -13,9 +13,9 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>CPlusPatch CMS</title>
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&amp;display=swap" rel="stylesheet">
+	<!-- Fonts (loaded asynchronously) -->
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css"  media="print" onload="this.media='all'; this.onload=null;">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&display=swap" rel="stylesheet"  media="print" onload="this.media='all'; this.onload=null;">
   </head>
   <body class="relative w-full h-full overflow-scroll antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>

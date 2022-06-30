@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Navbar from "./navbar/Navbar";
 import itchIo from "../../static/itch-io.svg";
-import sidequest from "../../static/sidequest.png";
-import banner from "../../static/banner.png";
+import sidequest from "../../static/sidequest.webp";
+import banner from "../../static/banner.webp";
 import { ExternalLinkIcon } from '@heroicons/react/solid';
 
   
