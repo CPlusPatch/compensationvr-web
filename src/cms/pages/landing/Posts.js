@@ -114,33 +114,27 @@ function Posts() {
     }, []);
 
 	return (
-		<ul className="divide-y divide-gray-200 dark:divide-gray-700">
-			{posts.length == 0 ?
-			<>
-				<li className="py-12">
-					<PostCardSkeleton/>
-				</li>
-				<li className="py-12">
-					<PostCardSkeleton/>
-				</li>
-			</>
-			: null}
-			{posts.map(post => {
-				return (
-				<li className="py-12" key={post.id}>
-					<PostCard
-						id={post.id}
-						desc={post.data.description}
-						title={post.data.title}
-						author={post.data.author}
-						uuid={post.data.uuid}
-						slug={post.data.slug}
-						role={userData.role}
-					/>
-				</li>
-				);
-			})}
-		</ul>
+		<div className="grid gap-16 pt-10 mt-6 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+          {posts.map((post) => (
+            <div key={post.id}>
+              <p className="text-sm text-gray-500">
+                <time dateTime={post.datetime}>{post.date}</time>
+              </p>
+              <a href="#" className="block mt-2">
+				{userData.role == "admin" ?
+                <a className="text-xl font-semibold text-gray-100" href={"/blog/editor/" + post.data.uuid}>{post.data.title}</a> :
+				<a className="text-xl font-semibold text-gray-100" href={"/blog/posts/" + post.data.slug}>{post.data.title}</a>
+				}
+                <p className="mt-3 text-base text-gray-200">{post.data.description}</p>
+              </a>
+              <div className="mt-3">
+                <a href={"/blog/posts/" + post.data.slug} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+                  Read full story
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
 	);
 }
 
