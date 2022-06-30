@@ -21,42 +21,42 @@ const people = [
 	  {
 		name: 'LeonInfinity',
 		role: 'In-Game Development, XR Controls, Networking',
-		imageUrl: "https://cdn.discordapp.com/attachments/814904970330636318/991354038895513721/CVR_Logo_LeonInfinity1.png",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fleon-pfp.webp?alt=media&token=f22a06bc-39e4-4fc8-ba4c-816238f4ee10",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Rose932',
 		role: 'In-Game Development, Creation Tools, API, XRUI, Web',
-		imageUrl: "https://cdn.discordapp.com/attachments/899293587349602305/992090422925070488/Rose932-8.png",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FRose932.webp?alt=media&token=4c0567f7-a8f7-45d0-a488-b45d30fbb7d2",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Bobrobot1',
 		role: 'CVRNet Development',
-		imageUrl: "https://cdn.discordapp.com/attachments/899293587349602305/992098193460445284/unknown.png",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fbobrobot1.webp?alt=media&token=8972aa7d-d324-43b6-afe2-688f75f679e2",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Keightie',
 		role: 'XR Development',
-		imageUrl: "https://cdn.discordapp.com/attachments/899293587349602305/992097745143857283/Keightie.png",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FKeightie.webp?alt=media&token=30a7c5df-d4cf-4312-9fbf-288f0a749f77",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'jai',
 		role: 'API Assistance, Kotlin',
-		imageUrl: "https://cdn.discordapp.com/attachments/899293587349602305/992097151972806676/jai.webp",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fjai.webp?alt=media&token=da9d82a2-b3f9-4644-a54c-272efae04a5b",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Zoey',
 		role: 'API Development, Golang',
-		imageUrl: "https://cdn.discordapp.com/attachments/899293587349602305/992097980851171339/Zoey.png",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2FZoey.webp?alt=media&token=350e04c4-fda8-4e24-8e85-48d7a108142f",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  }
@@ -150,14 +150,14 @@ function MainBanner() {
 						<img src={itchIo} alt="" className="h-12 pr-4 bounce-top-icons" />
 					</a>
 					<a href="https://sidequestvr.com/app/6232/compensation-vr">
-						<img src={sidequest} alt="" className="h-12 bounce-top-icons" />
+						<img src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Fget-it-on-sidequest.webp?alt=media&token=5f7e102f-fd6c-4d84-b420-7ae810eb00bf" alt="" className="h-12 bounce-top-icons" />
 					</a>
 				</div>
 
 			</div>
 
 			<div className="w-full overflow-y-hidden xl:w-3/5">
-				<img className="w-5/6 mx-auto lg:mr-0 slide-in-bottom" alt="" src={banner} />
+				<img className="w-5/6 mx-auto lg:mr-0 slide-in-bottom" alt="" src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Frose-punching-you.webp?alt=media&token=d8382643-8447-464a-8919-61c68494acd3" />
 			</div>
 		</div>
 	);
@@ -179,7 +179,7 @@ function GamePresentation() {
 				</div>
 				<div className="mt-12">
 					<img className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-						src="https://api.compensationvr.tk/img/2" alt="" />
+						src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2Ffriendly-rose.webp?alt=media&token=47acff09-51ce-4411-9b26-986c554bdf77" alt="" />
 				</div>
 			</div>
 		</div>
@@ -195,7 +195,7 @@ function Testimonials() {
 					<div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
 						<div className="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
 							<img className="object-cover lg:h-full lg:w-full"
-								src="https://i.imgur.com/4ySdkyH.png" alt="" />
+								src="https://firebasestorage.googleapis.com/v0/b/compensationvr-bb8ff.appspot.com/o/static%2F4ySdkyH.webp?alt=media&token=15bc0250-acd0-4b92-bc27-a98cc6fbde41" alt="" />
 						</div>
 					</div>
 				</div>
