@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import Footer from '../Footer';
-import Posts from "./Posts.js";
-import BlogHeader from "./headers/BlogHeader";
-import firebase from "../../../utils/firebase";
-import Navbar from "../../../vendor/welcome/navbar/Navbar";
+import React from "react";
+const Footer = React.lazy(() => import('../Footer'));
+const Posts = React.lazy(() => import("./Posts.js"));
+const BlogHeader = React.lazy(() => import('./headers/BlogHeader'));
+const Navbar = React.lazy(() => import('../../../vendor/welcome/navbar/Navbar'));
 
 function Welcome() {
 	return (

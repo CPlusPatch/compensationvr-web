@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types"
-import EditorNavbarDropdown from "./EditorNavbarDropdown";
-import EditorNavbarDropdownItem from "./EditorNavbarDropdownItem";
+const EditorNavbarDropdown = React.lazy(() => import("./EditorNavbarDropdown"));
+const EditorNavbarDropdownItem = React.lazy(() => import("./EditorNavbarDropdownItem"));
 
 function EditorNavbar(props) {
 	return (

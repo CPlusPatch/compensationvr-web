@@ -31,13 +31,13 @@ export default function Posts() {
               <p className="text-sm text-gray-500">
                 <time dateTime={post.datetime}>{post.date}</time>
               </p>
-              <a href="#" className="block mt-2">
+              <div className="block mt-2">
 				{userData.role == "admin" ?
                 <a className="text-xl font-semibold text-gray-100" href={"/blog/editor/" + post.data.uuid}>{post.data.title}</a> :
 				<a className="text-xl font-semibold text-gray-100" href={"/blog/posts/" + post.data.slug}>{post.data.title}</a>
 				}
                 <p className="mt-3 text-base text-gray-200">{post.data.description}</p>
-              </a>
+              </div>
               <div className="mt-3">
                 <a href={"/blog/posts/" + post.data.slug} className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
                   Read full story

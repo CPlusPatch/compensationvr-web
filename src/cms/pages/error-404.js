@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRightIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon } from '@heroicons/react/solid';
 import { MailOpenIcon, BookOpenIcon, RssIcon, ViewListIcon } from '@heroicons/react/outline'
 
 export default function Error404() {

@@ -1,14 +1,14 @@
 import './App.css';
-import React, { useState } from "react";
-import Welcome from "./cms/pages/landing/Welcome";
-import SignInPage from './auth/SignInPage';
-import PostEditor from "./cms/editor/PostEditor";
-import PostView from "./cms/pages/posts/PostView";
-import FrontPage from './vendor/welcome/FrontPage';
-import ShitpostFrontPage from './vendor/welcome/ShitpostFrontPage';
+import React from "react";
+const Welcome = React.lazy(() => import("./cms/pages/landing/Welcome"));
+const SignInPage = React.lazy(() => import("./auth/SignInPage"));
+const PostEditor = React.lazy(() => import("./cms/editor/PostEditor"));
+const PostView = React.lazy(() => import("./cms/pages/posts/PostView"));
+const FrontPage = React.lazy(() => import('./vendor/welcome/FrontPage'));
+const ShitpostFrontPage = React.lazy(() => import('./vendor/welcome/ShitpostFrontPage'));
+const Error404 = React.lazy(() => import('./cms/pages/error-404'));
+const SiteSettings = React.lazy(() => import('./cms/settings/SiteSettings'));
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Error404 from './cms/pages/error-404';
-import SiteSettings from './cms/settings/SiteSettings';
 
 function App() {
 	return (

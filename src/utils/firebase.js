@@ -17,8 +17,8 @@ POSTS
  - deletePost
 */
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { doc, getDoc, query, collection, setDoc, orderBy, getFirestore, getDocs, ref } from "@firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc, query, collection, setDoc, orderBy, getFirestore, getDocs } from "@firebase/firestore";
 import { getStorage } from "firebase/storage";
 import persistedState from "./PersistedState";
 

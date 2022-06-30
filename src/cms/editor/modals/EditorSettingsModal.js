@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { Dialog, Transition, Listbox } from '@headlessui/react';
-import EditorVisibilitySelect from './EditorVisibilitySelect';
+const EditorVisibilitySelect = React.lazy(() => import('./EditorVisibilitySelect'));
+const EditorDescriptionField = React.lazy(() => import('./EditorDescriptionField'));
 import PropType from "prop-types";
-import EditorDescriptionField from './EditorDescriptionField';
 
 function EditorSettingsModal(props) {
 	let [isOpen, setIsOpen] = useState(true)

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import Navbar from "./navbar/Navbar";
+import React from "react";
+const Navbar = React.lazy(() => import("./navbar/Navbar"));
 import itchIo from "../../static/itch-io.svg";
 import sidequest from "../../static/sidequest.webp";
 import banner from "../../static/banner.webp";
@@ -107,7 +107,7 @@ const blogPosts = [
 	readingLength: '6 min',
 },
 {
-	id: 2,
+	id: 3,
 	title: "Shut the fuck up",
 	href: '#',
 	date: 'May 20, 2022',
@@ -166,7 +166,7 @@ function MainBanner() {
 			</div>
 
 			<div className="w-full overflow-y-hidden xl:w-3/5">
-				<img fetchpriority="high" className="w-5/6 mx-auto lg:mr-0 slide-in-bottom" alt="" src={banner} />
+				<img fetchpriority="high" className="hidden w-5/6 mx-auto lg:mr-0 md:block" alt="" src={banner} />
 			</div>
 		</div>
 	);
