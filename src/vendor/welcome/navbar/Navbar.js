@@ -5,10 +5,10 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import firebase from "../../../utils/firebase";
 
 const navigation = [
-	{ name: 'Product', href: '#' },
-	{ name: 'Features', href: '#' },
-	{ name: 'Marketplace', href: '#' },
-	{ name: 'Company', href: '#' },
+	{ name: 'News', href: '/blog' },
+	{ name: 'About', href: '#' },
+	{ name: 'Our team', href: '#' },
+	{ name: 'Contact', href: '#' },
 ];
 
 export default function Navbar() {

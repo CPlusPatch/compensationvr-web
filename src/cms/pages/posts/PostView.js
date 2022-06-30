@@ -21,7 +21,12 @@ function PostView() {
 	
 	useEffect(() => {
 		async function fetchPostData() {
-			const post = (await firebase.getPostByFields(where("visibility", "==", "public"), where("slug", "==", slug)))[0];
+			const user = firebase.isUserLoggedIn() ? await firebase.getUserData((await firebase.getUser()).uid) : {role: "default"};
+
+			var whereData = where('visibility', '==', "public"); // Default value if signed out
+			if (user.role == "user") whereData = where('visibility', "in", ["public", "restricted"]);
+			if (user.role == "admin") whereData = where('visibility', "in", ["public", "restricted", "private"]);
+			const post = (await firebase.getPostByFields(whereData, where("slug", "==", slug)))[0];
 			setPostData({id: post.id, data: post.data});
 		}
 		fetchPostData();
