@@ -5,6 +5,7 @@ import SignInPage from './auth/SignInPage';
 import PostEditor from "./cms/editor/PostEditor";
 import PostView from "./cms/pages/posts/PostView";
 import FrontPage from './vendor/welcome/FrontPage';
+import ShitpostFrontPage from './vendor/welcome/ShitpostFrontPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error404 from './cms/pages/error-404';
 import SiteSettings from './cms/settings/SiteSettings';
@@ -16,6 +17,9 @@ function App() {
 			<Route path="*" element={<Error404 />} />
 				<Route path="/">
 					<Route index element={<FrontPage />} />
+					<Route path="cpluspatch">
+						<Route index element={<ShitpostFrontPage/>} />
+					</Route>
 					<Route path="blog">
 						<Route index element={<Welcome />} />
 						<Route path="login" element={<SignInPage/>} />
