@@ -12,7 +12,7 @@ function Welcome() {
 				<Navbar/>
 				<main className="mt-14">
 					<div className="divide-y divide-gray-700">
-						<BlogHeader/> 
+						<BlogHeader/>
 						<Posts />
 					</div>
 				<Footer/>
