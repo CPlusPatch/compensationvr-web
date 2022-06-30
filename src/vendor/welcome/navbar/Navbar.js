@@ -22,7 +22,7 @@ export default function Navbar() {
 						<div className="flex items-center justify-between w-full md:w-auto">
 							<a href="/">
 								<span className="sr-only">CompensationVR</span>
-								<img className="w-auto h-8 sm:h-10"
+								<img className="w-8 h-8 sm:h-10 sm:w-10"
 									src="https://cdn.discordapp.com/icons/812825311002624060/c47013b226b3d61b65c817505b707a78.webp?size=96"
 									alt="" />
 							</a>
