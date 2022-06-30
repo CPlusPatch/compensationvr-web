@@ -17,8 +17,8 @@ POSTS
  - deletePost
 */
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { doc, getDoc, query, collection, setDoc, orderBy, getFirestore, getDocs } from "@firebase/firestore";
+import { initializeAuth, indexedDBLocalPersistence, browserLocalPersistence, browserSessionPersistence, browserPopupRedirectResolver, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore } from "@firebase/firestore";
 import { getStorage } from "firebase/storage";
 import persistedState from "./PersistedState";
 
@@ -34,7 +34,13 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const auth = getAuth(app);
+const auth = initializeAuth(app, {
+	persistence: [
+		indexedDBLocalPersistence,
+		browserLocalPersistence,
+		browserSessionPersistence
+	],
+});
 const storage = getStorage(app);
 
 export default {
@@ -49,18 +55,22 @@ export default {
 		return JSON.stringify(userLoggedIn) !== "{}" ? userLoggedIn : false;
 	},
 	getUserData: async (user) => {
+		const { doc, getDoc } = import("@firebase/firestore");
 		// Takes a user ID and returns the user's data
 		return (await getDoc(doc(db, 'users', user))).data();
 	},
 	setUserField: async (field, value) => {
+		const { doc, setDoc } = import("@firebase/firestore");
 		let userLoggedIn = persistedState.getState("user", {});
 		await setDoc(doc(db, 'users', userLoggedIn.uid), {[field]: value});
 	},
 	signOut: async () => {
+
 		await auth.signOut();
 		return persistedState.setState("user", {});
 	},
 	getUsers: async () => {
+		const { query, collection, getDocs } = import("@firebase/firestore");
 		return (await getDocs(query(collection(db, 'users')))).docs.map(doc => doc.data());
 	},
 	logIn: async (email, password) => {
@@ -74,6 +84,7 @@ export default {
 		return user.user;
 	},
 	getPosts: async (whereData = false) => {
+		const { query, collection, orderBy, getDocs } = import("@firebase/firestore");
 		const q = whereData ? query(collection(db, 'posts'), whereData, orderBy("date", "desc")) : query(collection(db, 'posts'), orderBy("date", "desc"));
 		let posts = [];
 
@@ -87,6 +98,7 @@ export default {
 		return posts;
 	},
 	getPostByFields: async (...fields) => {
+		const { query, collection, getDocs } = import("@firebase/firestore");
 		let posts = [];
 		const querySnapshot = await getDocs(query(collection(db, 'posts'), ...fields));
 		querySnapshot.forEach((doc) => {
@@ -98,12 +110,14 @@ export default {
 		return posts;
 	},
 	setPostField: async (postId, field, value) => {
+		const { doc, collection, setDoc } = import("@firebase/firestore");
 		console.log(postId, field, value);
 		return await setDoc(doc(collection(db, 'posts'), postId), {
 			[field]: value
 		}, { merge: true });
 	},
 	addPost: async (postData) => {
+		const { doc, collection, setDoc } = import("@firebase/firestore");
 		await setDoc(doc(collection(db, 'posts')), postData);
 	},
 };

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import firebase from "../../../utils/firebase";
+const AccountButtons = React.lazy(() => import('./AccountButtons'));
 
 const navigation = [
 	{ name: 'News', href: '/blog' },
@@ -11,7 +11,7 @@ const navigation = [
 ];
 
 export default function Navbar() {
-	const userLoggedIn = firebase.isUserLoggedIn();
+	
 	
 	return (
 		<Popover as="header" className="relative font-exo">
@@ -44,7 +44,7 @@ export default function Navbar() {
 						</div>
 					</div>
 					<div className="hidden md:flex md:items-center md:space-x-6 font-exo">
-						{userLoggedIn ? <SignOutButton/> : <SignInButton/>}
+						<AccountButtons/>
 						<a href="/download"
 							className="inline-flex items-center px-4 py-2 text-white uppercase transition-all duration-200 bg-transparent border-2 border-indigo-700 rounded-lg hover:bg-indigo-800 hover:text-white text-md hover:scale-105">
 							Download
@@ -104,23 +104,3 @@ export default function Navbar() {
 	);
 }
 
-function SignOutButton() {
-	const userLoggedIn = firebase.isUserLoggedIn();
-
-	const handleSignOut = async () => {
-		await firebase.signOut();
-		window.location.pathname = "/blog"
-	};
-	return userLoggedIn && (
-		<button onClick={handleSignOut} type="button" className="text-base font-medium text-white hover:text-gray-300">Sign out</button>
-	)
-}
-
-function SignInButton() {
-	const redirectToSignInPage = () => {
-		window.location.pathname = "/blog/login";
-	};
-	return (
-		<button onClick={redirectToSignInPage} type="button" className="text-base font-medium text-white hover:text-gray-300">Sign in</button>
-	);
-}
