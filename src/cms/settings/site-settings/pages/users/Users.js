@@ -14,21 +14,19 @@ export default function Users() {
 		getUsers();
 	}, []);
 	return (
-		<>
+		<div className="p-6 bg-gray-800 shadow sm:rounded-md">
 			<Heading/>
 			<div className="flex flex-col mt-3">
 				<div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
 					<div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
 					<div className="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
 						<table className="min-w-full divide-y divide-gray-200">
-						<thead className="bg-gray-50">
+						<thead className="bg-gray-900">
 							<tr>
-							<th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+							<th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-300 uppercase">
 								Name
 							</th>
-							<th
-								scope="col"
-								className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+							<th scope="col" className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-300 uppercase">
 								Role
 							</th>
 							<th scope="col" className="relative px-6 py-3">
@@ -36,7 +34,7 @@ export default function Users() {
 							</th>
 							</tr>
 						</thead>
-						<tbody className="bg-white divide-y divide-gray-200">
+						<tbody className="bg-gray-900 divide-y divide-gray-500">
 							{
 							JSON.stringify(users) === "[]" ?
 							<tr>
@@ -65,12 +63,12 @@ export default function Users() {
 									<img className="w-10 h-10 rounded-full" src={user.avatar} alt="" />
 									</div>
 									<div className="ml-4">
-									<div className="text-sm font-medium text-gray-900">{user.name}</div>
-									<div className="text-sm text-gray-500">{user.email}</div>
+									<div className="text-sm font-medium text-gray-100">{user.name}</div>
+									<div className="text-sm text-gray-200">{user.email}</div>
 									</div>
 								</div>
 								</td>
-								<td className="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">{user.role}</td>
+								<td className="px-6 py-4 text-sm text-gray-200 whitespace-nowrap">{user.role}</td>
 								<td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
 								<button onClick={() => {
 									setUserSettingsModal(
@@ -89,7 +87,7 @@ export default function Users() {
 				</div>
 			</div>
 			{userSettingsModal}
-		</>
+		</div>
 	)
 }
 
@@ -97,7 +95,7 @@ function Heading() {
 	return (
 	  <div className="md:flex md:items-center md:justify-between">
 		<div className="flex-1 min-w-0">
-		  <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Users</h2>
+		  <h2 className="text-2xl font-bold leading-7 text-gray-100 sm:text-3xl sm:truncate">Users</h2>
 		</div>
 		<div className="flex mt-4 md:mt-0 md:ml-4">
 		  <button

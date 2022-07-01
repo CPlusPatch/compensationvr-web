@@ -7,7 +7,7 @@ const PostView = React.lazy(() => import("./cms/pages/posts/PostView"));
 const FrontPage = React.lazy(() => import('./vendor/welcome/FrontPage'));
 const ShitpostFrontPage = React.lazy(() => import('./vendor/welcome/ShitpostFrontPage'));
 const Error404 = React.lazy(() => import('./cms/pages/error-404'));
-const SiteSettings = React.lazy(() => import('./cms/settings/SiteSettings'));
+const Dashboard = React.lazy(() => import('./cms/settings/Dashboard'));
 const Social = React.lazy(() => import('./vendor/social/Social'));
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -27,7 +27,7 @@ function App() {
 						<Route path="posts/:slug" element={<PostView />}/>
 					</Route>
 					<Route path="dashboard">
-						<Route index element={<SiteSettings />} />
+						<Route index element={<Dashboard />} />
 					</Route>
 				</Route>
 			</Routes>

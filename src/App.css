@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	height: 100%;
+}
+
 body {
     min-width: fit-content;
 }

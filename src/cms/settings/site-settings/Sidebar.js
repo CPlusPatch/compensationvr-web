@@ -1,11 +1,20 @@
 import React from "react";
-import { People, FilePost, Palette2 } from "react-bootstrap-icons";
-import Users from "./pages/users/Users";
+import {
+	BellIcon,
+	CogIcon,
+	CreditCardIcon,
+	KeyIcon,
+	UserCircleIcon,
+	ViewGridAddIcon,
+  } from '@heroicons/react/outline';
 
-const navigation = [
-  { name: 'Users', href: '#', icon: People, current: true },
-  { name: 'Posts', href: '#', icon: FilePost, current: false },
-  { name: 'Theming', href: '#', icon: Palette2, current: false },
+const subNavigation = [
+	{ name: 'Users', href: '#', icon: UserCircleIcon, current: true },
+	{ name: 'Account', href: '#', icon: CogIcon, current: false },
+	{ name: 'Password', href: '#', icon: KeyIcon, current: false },
+	{ name: 'Notifications', href: '#', icon: BellIcon, current: false },
+	{ name: 'Plan & Billing', href: '#', icon: CreditCardIcon, current: false },
+	{ name: 'Integrations', href: '#', icon: ViewGridAddIcon, current: false },
 ]
 
 function classNames(...classes) {
@@ -13,35 +22,29 @@ function classNames(...classes) {
 }
 
 export default function Sidebar() {
-  return (
-	<div className="flex flex-col mt-6 space-x-6 sm:flex-row">
-		<div className="w-full px-4 mb-4 lg:w-1/5 grow-0 sm:px-0">
-			<nav className="w-full space-y-1 overflow-hidden rounded-md shadow-md" aria-label="Sidebar">
-			{navigation.map((item) => (
-				<a
-				key={item.name}
-				href={item.href}
-				className={classNames(
-					item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
-					'group flex items-center px-3 py-3 text-sm font-medium'
-				)}
-				aria-current={item.current ? 'page' : undefined}
-				>
-				<item.icon
-					className={classNames(
-					item.current ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500',
-					'flex-shrink-0 -ml-1 mr-3 h-6 w-6'
-					)}
-					aria-hidden="true"
-				/>
-				<span className="truncate">{item.name}</span>
-				</a>
-			))}
-			</nav>
+  	return (
+		<div className="bg-gradient-to-r p-[2px] from-[#7928ca] to-[#ff0080] lg:col-span-3 rounded-md h-fit">
+			<aside className="px-2 py-6 bg-gray-900 rounded-md sm:px-6 lg:py-0 lg:px-0">
+					<nav className="space-y-1">
+						{subNavigation.map((item) => (
+						<a key={item.name}
+						href={item.href}
+						className={
+							classNames(item.current  ? 'bg-gray-800 text-transparent bg-clip-text bg-gradient-to-r p-[2px] from-[#7928ca] to-[#ff0080]' : 'text-gray-200 hover:text-gray-100 hover:bg-gray-800',
+						'group rounded-md px-3 py-2 flex items-center text-sm font-medium')}
+						aria-current={item.current ? 'page' : undefined}>
+							<item.icon
+							className={classNames(
+								item.current ? 'text-gray-200' : 'text-gray-400 group-hover:text-gray-200',
+								'flex-shrink-0 -ml-1 mr-3 h-6 w-6'
+							)}
+							aria-hidden="true"
+							/>
+							<span className="truncate">{item.name}</span>
+						</a>
+						))}
+					</nav>
+			</aside>
 		</div>
-		<div className="px-2 grow">
-			<Users/>
-		</div>
-	</div>
-  )
+  	)
 }
