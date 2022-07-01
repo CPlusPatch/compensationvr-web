@@ -156,17 +156,17 @@ function MainBanner() {
 					game:</p>
 				<div className="flex justify-center w-full pb-24 md:justify-start lg:pb-0 fade-in glow">
 					<a href="https://leonto-gamer.itch.io/compensation-vr">
-						<img fetchpriority="high" src={itchIo} alt="" className="h-12 pr-4 bounce-top-icons" width="171" h="48"/>
+						<img fetchpriority="high" src={itchIo} alt="" className="h-12 pr-4" width="171" h="48"/>
 					</a>
 					<a href="https://sidequestvr.com/app/6232/compensation-vr">
-						<img fetchpriority="high" src={sidequest} alt="" className="h-12 bounce-top-icons" width="162" h="48" />
+						<img fetchpriority="high" src={sidequest} alt="" className="h-12" width="162" h="48" />
 					</a>
 				</div>
 
 			</div>
 
 			<div className="w-full overflow-y-hidden xl:w-3/5">
-				<img fetchpriority="high" className="hidden w-5/6 mx-auto lg:mr-0 md:block" alt="" src={banner} />
+				<img fetchpriority="high" className="hidden w-5/6 mx-auto lg:mr-0 md:block" alt="" src={banner} width="616" height="616"/>
 			</div>
 		</div>
 	);

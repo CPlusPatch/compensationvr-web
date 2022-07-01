@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "../../../utils/firebase.js";
 import PropTypes from "prop-types";
-import { where } from "@firebase/firestore";
+import { where } from "@firebase/firestore/lite";
 
 export default function Posts() {
 	const [posts, setPosts] = useState([]);

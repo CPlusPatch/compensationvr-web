@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { where } from "firebase/firestore";
+import { where } from "firebase/firestore/lite";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import firebase from "../../utils/firebase";
 import EditorJS from '@editorjs/editorjs';

@@ -53,7 +53,7 @@ export default function Navbar() {
 				</nav>
 			</div>
 
-			<Transition as={Fragment} enter="duration-150 ease-out" enterFrom="opacity-0 scale-95"
+			{/*<Transition as={Fragment} enter="duration-150 ease-out" enterFrom="opacity-0 scale-95"
 				enterTo="opacity-100 scale-100" leave="duration-100 ease-in" leaveFrom="opacity-100 scale-100"
 				leaveTo="opacity-0 scale-95">
 				<Popover.Panel focus
@@ -99,7 +99,7 @@ export default function Navbar() {
 						</div>
 					</div>
 				</Popover.Panel>
-			</Transition>
+			</Transition>*/}
 		</Popover>
 	);
 }

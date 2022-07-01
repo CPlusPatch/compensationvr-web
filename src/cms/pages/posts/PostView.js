@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
+import { where } from "firebase/firestore/lite";
 import firebase from "../../../utils/firebase";
 import Blocks from 'editorjs-blocks-react-renderer';
 import AppNavbar from "../navbar/AppNavbar";

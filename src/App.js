@@ -8,6 +8,7 @@ const FrontPage = React.lazy(() => import('./vendor/welcome/FrontPage'));
 const ShitpostFrontPage = React.lazy(() => import('./vendor/welcome/ShitpostFrontPage'));
 const Error404 = React.lazy(() => import('./cms/pages/error-404'));
 const SiteSettings = React.lazy(() => import('./cms/settings/SiteSettings'));
+const Social = React.lazy(() => import('./vendor/social/Social'));
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,9 +18,8 @@ function App() {
 			<Route path="*" element={<Error404 />} />
 				<Route path="/">
 					<Route index element={<FrontPage />} />
-					<Route path="cpluspatch">
-						<Route index element={<ShitpostFrontPage/>} />
-					</Route>
+					<Route path="cpluspatch" element={<ShitpostFrontPage/>}/>
+					<Route path="social" element={<Social/>}/>
 					<Route path="blog">
 						<Route index element={<Welcome />} />
 						<Route path="login" element={<SignInPage/>} />

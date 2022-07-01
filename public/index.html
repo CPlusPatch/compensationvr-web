@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="w-full h-full">
+<html lang="en" class="overflow-scroll ">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -17,8 +17,12 @@
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   </head>
-  <body class="relative w-full h-full overflow-scroll antialiased">
+  <body class="relative w-full h-full antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" class="w-full h-full"></div>
+    <div id="root" class="w-full h-full">
+		<div class="z-50 flex items-center justify-center w-full h-full text-gray-100 bg-gray-900">
+			Loading...
+		</div>
+	</div>
   </body>
 </html>

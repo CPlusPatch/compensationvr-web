@@ -20,13 +20,17 @@
     "editorjs-blocks-react-renderer": "^1.2.4",
     "express": "^4.18.1",
     "firebase": "^9.8.4",
+    "node-fetch": "^3.2.6",
     "nth-check": "^2.1.1",
+    "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-bootstrap-icons": "^1.8.4",
     "react-dom": "^18.2.0",
     "react-editor-js": "^2.0.6",
+    "react-infinite-scroll-component": "^6.1.0",
     "react-scripts": "^5.0.1",
     "slugify": "^1.6.5",
+    "url": "^0.11.0",
     "uuid": "^8.3.2",
     "windups": "^1.2.1"
   },
@@ -55,7 +59,7 @@
     ]
   },
   "overrides": {
-	"@svgr/webpack": "$@svgr/webpack"
+    "@svgr/webpack": "$@svgr/webpack"
   },
   "devDependencies": {
     "@editorjs/code": "^2.7.0",
