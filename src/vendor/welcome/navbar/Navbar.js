@@ -61,7 +61,7 @@ export default function Navbar() {
 					<div className="overflow-hidden bg-gray-800 rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
 						<div className="flex items-center justify-between px-5 pt-4">
 							<div>
-								<img className="w-8 w-auto h-8"
+								<img className="w-8 h-8"
 									src="https://cdn.discordapp.com/icons/812825311002624060/c47013b226b3d61b65c817505b707a78.webp?size=96"
 									alt="" />
 							</div>
