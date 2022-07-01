@@ -72,56 +72,22 @@ const people = [
 ]
   
 const blogPosts = [
-{
-	id: 1,
-	title: 'We just got DDOS\'d',
-	href: '#',
-	date: 'May 22, 2022',
-	datetime: '2022-05-22',
-	category: { name: 'Article', href: '#' },
-	imageUrl: "https://s.yimg.com/ny/api/res/1.2/kXMAEaGIvR7g3MNtxwedPg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://s.yimg.com/uu/api/res/1.2/wpFbo3KAVcyjMtAo6e8L.Q--~B/aD01NjY7dz04NDk7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en-US/homerun/linkedin_137/26bcdf9f224948ad572e6061f3beb663",
-	preview:
-	'Major L today bozos, the main website just got DDOS\'d. We\'re not sure what happened, but we\'re pretty sure it was a bad thing.',
-	author: {
-		name: 'Johnny Sins',
-		imageUrl: leon,
+	{
+		id: 1,
+		title: 'Recent DDOS attack',
 		href: '#',
-	},
-	readingLength: '6 min',
-},
-{
-	id: 2,
-	title: 'Introducing VRGun',
-	href: '#',
-	date: 'May 21, 2022',
-	datetime: '2022-05-21',
-	category: { name: 'Article', href: '#' },
-	imageUrl: "https://cdn-images.win.gg/resize/w/620/format/webp/type/progressive/fit/cover/path/wp/uploads/2021/08/how-do-csgo-ranks-work-and-how-to-climb-the-ladder.jpg",
-	preview:
-	'TIME FOR MOTHERFUCKING GUNS IN CVR LETS FUCKING GOOOOOOO WHERE WE DROPPING BOYS',
-	author: {
-		name: 'Johnny Sins',
-		imageUrl: leon,
-		href: '#',
-	},
-	readingLength: '6 min',
-},
-{
-	id: 3,
-	title: "Shut the fuck up",
-	href: '#',
-	date: 'May 20, 2022',
-	datetime: '2022-05-20',
-	category: { name: 'Article', href: '#' },
-	imageUrl: ominousRose,
-	preview: "You'd better shut the fuck up man otherwise I'm gonna punch those VR teeth until your headset breaks. Don't try me mf.",
-	author: {
-		name: 'Johnny Sins',
-		imageUrl: leon,
-		href: '#',
-	},
-	readingLength: '6 min',
-}
+		date: 'May 22, 2022',
+		datetime: '2022-05-22',
+		category: { name: 'News', href: '#' },
+		imageUrl: ominousRose,
+		preview: "It has come to our attention that our servers have been hit by a Distributed Denial of Service attack. This is a serious issue and we are currently working to resolve it.",
+		author: {
+			name: 'LeonInfinity',
+			imageUrl: leon,
+			href: '#',
+		},
+		readingLength: '2 min',
+	}
 ]
 
 export default function FrontPage() {
@@ -218,9 +184,7 @@ function Testimonials() {
 										d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
 								</svg>
 								<p className="mt-6 text-2xl font-medium text-white">
-									Yes this game is very halal, I would really recommend it as it is a very fun
-									and enjoyable game. Furthermore, I was not paid for this review and
-									genuinely think it is a cool game.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet, mauris ut mollis malesuada, ex orci laoreet leo, in placerat odio lorem nec magna. Donec auctor luctus mauris non consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin interdum eu libero ut dignissim.
 								</p>
 							</div>
 							<footer className="mt-6">
@@ -237,18 +201,15 @@ function Testimonials() {
 
 function Articles() {
 	return (
-		<div className="relative py-16 sm:py-24 lg:py-32 font-exo">
+		<div className="relative py-16 sm:py-24 font-exo">
 			<div className="relative">
 				<div className="max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-					<h2 className="text-base font-semibold tracking-wider text-red-600 uppercase">Learn</h2>
+					<h2 className="text-base font-semibold tracking-wider text-red-600 uppercase">News</h2>
 					<p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">
-						Latest articles from the team
+						Latest news
 					</p>
 					<p className="mx-auto mt-5 text-xl text-gray-200 max-w-prose">
-						We&apos;ve written a few articles about the game, and we&apos;ve also written a few articles about
-						the game.
-						Feeling trolled by our game? We&apos;ve written a few articles about the game, and we&apos;ve also
-						written a few articles about the game.
+						New things are always being added as time goes by. Here are some of our latest posts!
 					</p>
 				</div>
 				<div
@@ -306,7 +267,7 @@ function TeamPresentation() {
 				<div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
 					<h2 className="text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">Our Team</h2>
 					<p className="text-xl text-gray-200">
-						No epic gamer game is made without a very cool team. We&apos;re a team of developers who love to create games.
+						Subsurface Studios is a small team of dedicated developers who are passionate about building a better VR experience for everyone.
 					</p>
 				</div>
 				<ul

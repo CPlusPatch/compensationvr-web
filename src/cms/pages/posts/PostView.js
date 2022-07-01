@@ -4,6 +4,7 @@ import { where } from "firebase/firestore/lite";
 import firebase from "../../../utils/firebase";
 import Blocks from 'editorjs-blocks-react-renderer';
 import AppNavbar from "../navbar/AppNavbar";
+import Navbar from "../../../vendor/welcome/navbar/Navbar";
 
 
 function PostView() {
@@ -33,18 +34,21 @@ function PostView() {
 	}, []);
 
 	return (
-		<div className="px-4 mx-5 sm:px-6 xl:px-0 md:mx-48">
-			<div className="flex flex-col justify-between h-screen">
-				<AppNavbar/>
+		<div className='bg-gray-900'>
+			<div className="relative mx-auto overflow-hidden max-w-7xl">
+				<Navbar/>
 				<div className="flex justify-center w-full h-full">
 					<style>{"\
 						.prose :where(img):not(:where([class~=\"not-prose\"] *)) {\
 							margin-top: 0;\
 							margin-bottom: 0;\
 						}\
+						.prose :where(h1,h2,h3,h4,h5,h6):not(:where([class~=\"not-prose\"] *)) {\
+							color: inherit;\
+						}\
 					"}</style>
-					<div className="w-full h-full prose md:px-0 md:w-11/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 max-w-none">
-						<div className="w-full h-full px-4">
+					<div className="w-full h-full mt-16 prose md:mt-24 lg:mt-32 md:px-0 md:w-11/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12 max-w-none">
+						<div className="w-full h-full px-4 text-gray-100">
 							<Blocks data={JSON.parse(postData.data.blocks)} />
 						</div>
 					</div>
