@@ -1,15 +1,19 @@
 import React from "react";
 import { ChevronRightIcon } from '@heroicons/react/solid';
-import { MailOpenIcon, BookOpenIcon, RssIcon, ViewListIcon } from '@heroicons/react/outline'
+import { MailOpenIcon, BookOpenIcon, RssIcon } from '@heroicons/react/outline';
+import { Helmet } from "react-helmet";
 
 export default function Error404() {
 	const links = [
-		{ title: 'Main Page', description: 'Check out CPlusPatch and his stuff there', icon: BookOpenIcon, href: '/' },
-		{ title: 'Blog', description: 'My experimental CMS system is here', icon: RssIcon, href: '/blog' },
-		{ title: 'Contact', description: 'How to contact me', icon: MailOpenIcon, href: "/contact" },
+		{ title: 'Main Page', description: 'CompensationVR presentation', icon: BookOpenIcon, href: '/' },
+		{ title: 'News', description: 'News about the game', icon: RssIcon, href: '/blog' },
+		{ title: 'Contact', description: 'Contact CVR', icon: MailOpenIcon, href: "/contact" },
 	]
 	return (
 		<div className="bg-gray-900">
+			<Helmet>
+				<title>404 - Page Not Found</title>
+			</Helmet>
 			<main className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 				<div className="flex-shrink-0 pt-16">
 				<img

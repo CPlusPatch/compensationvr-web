@@ -14,6 +14,7 @@ import EditorSettingsModal from "./modals/EditorSettingsModal";
 import Undo from 'editorjs-undo';
 import DragDrop from "editorjs-drag-drop";
 import slugify from 'slugify';
+import { Helmet } from "react-helmet";
 
 var editorId = "";
 function PostEditor() {
@@ -56,7 +57,11 @@ function PostEditor() {
 	const handleOpenSettingsModal = () => {
 		const [v, d] = [postData.data.visibility, postData.data.description];
 		setSettingsModal(
-			<EditorSettingsModal key={Math.round(Math.random() * 1000000)} onVisibilityChange={handleVisibilityChange} onDescriptionChange={handleDescriptionChange} visibility={v} description={d}/>
+			<EditorSettingsModal key={Math.round(Math.random() * 1000000)}
+			onVisibilityChange={handleVisibilityChange}
+			onDescriptionChange={handleDescriptionChange}
+			visibility={v}
+			description={d}/>
 		);
 	}
 	
@@ -121,6 +126,9 @@ function PostEditor() {
 
 	return (
 		<>
+			<Helmet>
+				<title>{postData.data.title} &middot; Editing</title>
+			</Helmet>
 			<EditorNavbar
 				name={userData.name}
 				role={userData.role}

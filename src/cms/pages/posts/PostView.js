@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { where } from "firebase/firestore/lite";
 import firebase from "../../../utils/firebase";
 import Blocks from 'editorjs-blocks-react-renderer';
-import AppNavbar from "../navbar/AppNavbar";
+import { Helmet } from "react-helmet";
 import Navbar from "../../../vendor/welcome/navbar/Navbar";
 
 
@@ -35,6 +35,10 @@ function PostView() {
 
 	return (
 		<div className='bg-gray-900'>
+			<Helmet>
+				<title>{postData.data.title} &middot; CompensationVR</title>
+				<meta property="og:title" content={postData.data.title} />
+			</Helmet>
 			<div className="relative mx-auto overflow-hidden max-w-7xl">
 				<Navbar/>
 				<div className="flex justify-center w-full h-full">

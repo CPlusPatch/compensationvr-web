@@ -3,10 +3,14 @@ const Footer = React.lazy(() => import('../Footer'));
 const Posts = React.lazy(() => import("./Posts.js"));
 const BlogHeader = React.lazy(() => import('./headers/BlogHeader'));
 const Navbar = React.lazy(() => import('../../../vendor/welcome/navbar/Navbar'));
+import { Helmet } from "react-helmet";
 
 function Welcome() {
 	return (
 		<div className='w-full h-full bg-gray-900'>
+			<Helmet>
+				<title>News &middot; CompensationVR</title>
+			</Helmet>
 			<div className="relative mx-auto overflow-hidden max-w-7xl">
 				<Navbar/>
 				<main className="mt-14">

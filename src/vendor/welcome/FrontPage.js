@@ -13,6 +13,7 @@ import ominousRose from "../../static/ominous-rose.webp"
 import friendlyRose from "../../static/friendly-rose.webp"
 import ravenMusk from "../../static/raven-musk.webp"
 import { ExternalLinkIcon } from '@heroicons/react/solid';
+import Footer from "../../cms/pages/Footer";
 
   
 /*
@@ -103,6 +104,7 @@ export default function FrontPage() {
 					<TeamPresentation/>
 					<Support/>
 				</main>
+				<Footer/>
 			</div>
 		</div>
 	);

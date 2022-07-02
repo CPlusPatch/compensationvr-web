@@ -25,7 +25,7 @@ export default function Posts() {
     }, []);
 
 	return (
-		<div className="grid gap-16 pt-10 mt-6 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+		<div className="grid gap-16 pt-10 mt-6 lg:gap-y-12">
           {posts.map((post) => (
             <div key={post.id}>
               <p className="text-sm text-gray-500">
