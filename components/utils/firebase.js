@@ -20,7 +20,7 @@ import { initializeApp } from "firebase/app";
 import { initializeAuth, indexedDBLocalPersistence, browserLocalPersistence, browserSessionPersistence, browserPopupRedirectResolver, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, query, collection, setDoc, getFirestore, orderBy, getDocs } from "@firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
-import persistedState from "./PersistedState";
+
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBsJOhdSHcvk625x5d3BOcX9UnJ1Ys1Nm0",
@@ -35,7 +35,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Use this weird way of initializing auth because of a bug that loads a shitass useless component if we
+// Use this weird way of initializing auth because of a bug that loads a shitass useless component if we don't
 const auth = initializeAuth(app, {
 	persistence: [
 		indexedDBLocalPersistence,
@@ -48,39 +48,40 @@ const storage = getStorage(app);
 export default {
 	app: app,
 	storage: storage,
-	isUserLoggedIn: () => {
-		let userLoggedIn = persistedState.getState("user", {});
-		return JSON.stringify(userLoggedIn) !== "{}";
+	/*isUserLoggedIn: () => {
+		let userLoggedIn = getUserFromCookie();
+		return userLoggedIn === true;
 	},
 	getUser: async () => {
-		let userLoggedIn = persistedState.getState("user", {});
-		return JSON.stringify(userLoggedIn) !== "{}" ? userLoggedIn : false;
+		let userLoggedIn = getUserFromCookie();
+		return userLoggedIn === true ? userLoggedIn : false;
 	},
 	getUserData: async (user) => {
 		// Takes a user ID and returns the user's data
 		return (await getDoc(doc(db, 'users', user))).data();
 	},
 	setUserField: async (field, value) => {
-		let userLoggedIn = persistedState.getState("user", {});
+		let userLoggedIn = getUserFromCookie();
+		if (!userLoggedIn) return false;
 		await setDoc(doc(db, 'users', userLoggedIn.uid), {[field]: value});
 	},
 	signOut: async () => {
 		await auth.signOut();
-		return persistedState.setState("user", {});
-	},
+		return removeUserCookie();
+	},*/
 	getUsers: async () => {
 		return (await getDocs(query(collection(db, 'users')))).docs.map(doc => doc.data());
 	},
-	logIn: async (email, password) => {
+	/*logIn: async (email, password) => {
 		try {
 			var user = await signInWithEmailAndPassword(auth, email, password);
 		} catch (error) {
 			return false
 		}
 		
-		persistedState.setState("user", user.user);
+		setUserCookie(user.user);
 		return user.user;
-	},
+	},*/
 	getPosts: async (whereData = false) => {
 		const q = whereData ? query(collection(db, 'posts'), whereData, orderBy("date", "desc")) : query(collection(db, 'posts'), orderBy("date", "desc"));
 		let posts = [];

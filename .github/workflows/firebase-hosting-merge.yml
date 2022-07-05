@@ -6,6 +6,9 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
+env:
+  COOKIE_SECRET_CURRENT: ${{secrets.COOKIE_SECRET_CURRENT}}
+  COOKIE_SECRET_PREVIOUS: ${{secrets.COOKIE_SECRET_PREVIOUS}}
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import firebase from "../../../../utils/firebase";
 import slugify from 'slugify';
 import {v4 as uuidv4} from 'uuid';
+import { useSession } from "next-auth/react";
   
 export default function BlogHeader() {
-	const isUserLoggedIn = firebase.isUserLoggedIn();
+	const { data: session } = useSession();
  
 	const handleSubmit = async () => {
 		var user = await firebase.getUser();
@@ -40,7 +41,7 @@ export default function BlogHeader() {
 				Search
 				</button>
 				*/}
-				{isUserLoggedIn ?  
+				{session ?  
 				<button onClick={handleSubmit} type="button" className="inline-flex items-center px-4 py-2 mt-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm md:mt-0 md:ml-3 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 				Create
 				</button> : null

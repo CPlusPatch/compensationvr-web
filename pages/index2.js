@@ -1,14 +1,14 @@
 import './App.css';
 import React from "react";
-const Welcome = React.lazy(() => import("./cms/pages/landing/Welcome"));
-const SignInPage = React.lazy(() => import("./auth/SignInPage"));
-const PostEditor = React.lazy(() => import("./cms/editor/PostEditor"));
-const PostView = React.lazy(() => import("./cms/pages/posts/PostView"));
-const FrontPage = React.lazy(() => import('./vendor/welcome/FrontPage'));
-const ShitpostFrontPage = React.lazy(() => import('./vendor/welcome/ShitpostFrontPage'));
-const Error404 = React.lazy(() => import('./cms/pages/error-404'));
-const Dashboard = React.lazy(() => import('./cms/settings/Dashboard'));
-const Social = React.lazy(() => import('./vendor/social/Social'));
+const Welcome = React.lazy(() => import("../src/cms/pages/landing/Welcome"));
+const SignInPage = React.lazy(() => import("../src/auth/SignInPage"));
+const PostEditor = React.lazy(() => import("../src/cms/editor/PostEditor"));
+const PostView = React.lazy(() => import("../src/cms/pages/posts/PostView"));
+const FrontPage = React.lazy(() => import('../src/vendor/welcome/FrontPage'));
+const ShitpostFrontPage = React.lazy(() => import('../src/vendor/welcome/ShitpostFrontPage'));
+const Error404 = React.lazy(() => import('../src/cms/pages/error-404'));
+const Dashboard = React.lazy(() => import('../src/cms/settings/Dashboard'));
+const Social = React.lazy(() => import('../src/vendor/social/Social'));
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

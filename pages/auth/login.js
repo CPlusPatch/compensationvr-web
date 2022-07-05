@@ -1,7 +1,34 @@
-import React from "react";
-import firebase from "../utils/firebase";
+import React, { useState, useEffect } from "react";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import { withAuthUser, AuthAction } from 'next-firebase-auth';
+
+const firebaseAuthConfig = {
+	signInFlow: 'popup',
+	signInOptions: [{
+		provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+		requireDisplayName: false,
+	}, ],
+	signInSuccessUrl: '/',
+	credentialHelper: 'none',
+	callbacks: {
+		signInSuccessWithAuthResult: () => false,
+	},
+}
 
 function SignInPage() {
+	const [renderAuth, setRenderAuth] = useState(<></>);
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const StyledFirebaseAuth = (import("../../components/auth/StyledFirebaseAuth.tsx")).default;
+			setRenderAuth(
+			<StyledFirebaseAuth
+				uiConfig={firebaseAuthConfig}
+				firebaseAuth={firebase.auth()}
+			/>)
+		}
+	}, []);
 	return (
 		<section className="flex flex-col items-center h-screen md:flex-row">
 			<div className="hidden w-full h-screen bg-indigo-600 lg:block md:w-1/2 xl:w-2/3">
@@ -15,7 +42,7 @@ function SignInPage() {
 
 					<h1 className="mt-12 text-xl font-bold leading-tight md:text-2xl">Log in to your account</h1>
 
-					<FullwidthLoginForm/>
+					{renderAuth}
 
 					<hr className="w-full my-6 border-gray-300"></hr>
 
@@ -50,6 +77,9 @@ function SignInPage() {
 }
 
 function FullwidthLoginForm() {
+	var emailInput = React.useId("email");
+	var passwordInput = React.useId("password");
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		
@@ -67,14 +97,14 @@ function FullwidthLoginForm() {
 	return (
 		<form className="mt-6" action="#" method="POST" onSubmit={handleSubmit}>
 			<div>
-				<label className="block text-gray-700">Email Address</label>
-				<input type="email" name="email" placeholder="Enter Email Address" className="w-full px-4 py-3 mt-2 duration-200 bg-gray-200 border rounded-md focus:border-blue-500 focus:bg-white"
+				<label className="block text-gray-700" htmlFor={emailInput}>Email Address</label>
+				<input id={emailInput} type="text" name="email" placeholder="Enter Email Address" className="w-full px-4 py-3 mt-2 duration-200 bg-gray-200 border rounded-md appearance-none focus:border-blue-500 focus:bg-white"
 					autoFocus autoComplete="true" required></input>
 			</div>
 
 			<div className="mt-4">
-				<label className="block text-gray-700">Password</label>
-				<input type="password" name="password" placeholder="Enter Password" minLength="6" className="w-full px-4 py-3 mt-2 duration-200 bg-gray-200 border rounded-md focus:border-blue-500 focus:bg-white" required></input>
+				<label className="block text-gray-700" htmlFor={passwordInput}>Password</label>
+				<input id={passwordInput} type="password" name="password" placeholder="Enter Password" minLength="6" className="w-full px-4 py-3 mt-2 duration-200 bg-gray-200 border rounded-md focus:border-blue-500 focus:bg-white" required></input>
 			</div>
 
 			<div className="mt-2 text-right">
@@ -86,4 +116,8 @@ function FullwidthLoginForm() {
 	);
 }
 
-export default SignInPage;
+export default withAuthUser({
+	whenAuthed: AuthAction.RENDER,
+	whenUnauthedBeforeInit: AuthAction.RETURN_NULL,
+	whenUnauthedAfterInit: AuthAction.RENDER,
+  })(SignInPage);

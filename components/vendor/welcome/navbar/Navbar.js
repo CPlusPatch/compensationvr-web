@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-const AccountButtons = React.lazy(() => import('./AccountButtons'));
+import AccountButtons from './AccountButtons';
 
 const navigation = [
 	{ name: 'News', href: '/blog' },
@@ -11,8 +11,6 @@ const navigation = [
 ];
 
 export default function Navbar() {
-	
-	
 	return (
 		<Popover as="header" className="relative font-exo">
 			<div className="pt-6 bg-gray-900">
@@ -23,8 +21,7 @@ export default function Navbar() {
 							<a href="/">
 								<span className="sr-only">CompensationVR</span>
 								<img className="w-8 h-8 sm:h-10 sm:w-10"
-									src="https://cdn.discordapp.com/icons/812825311002624060/c47013b226b3d61b65c817505b707a78.webp?size=96"
-									alt="" />
+									src="https://cdn.discordapp.com/icons/812825311002624060/c47013b226b3d61b65c817505b707a78.webp?size=96" />
 							</a>
 							<div className="flex items-center -mr-2 md:hidden">
 								<Popover.Button

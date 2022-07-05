@@ -1,19 +1,7 @@
 import React from "react";
-const Navbar = React.lazy(() => import("./navbar/Navbar"));
-import itchIo from "../../static/itch-io.svg";
-import sidequest from "../../static/sidequest.webp";
-import banner from "../../static/banner.webp";
-import bobrobot1 from "../../static/bobrobot1.webp";
-import jai from "../../static/jai.webp";
-import keightie from "../../static/Keightie.webp";
-import leon from "../../static/leon-pfp.webp";
-import rose from "../../static/Rose932.webp";
-import zoey from "../../static/Zoey.webp";
-import ominousRose from "../../static/ominous-rose.webp"
-import friendlyRose from "../../static/friendly-rose.webp"
-import ravenMusk from "../../static/raven-musk.webp"
+import Navbar from "../components/vendor/welcome/navbar/Navbar";
 import { ExternalLinkIcon } from '@heroicons/react/solid';
-import Footer from "../../cms/pages/Footer";
+import Footer from "../components/cms/pages/Footer";
 
   
 /*
@@ -31,42 +19,42 @@ const people = [
 	  {
 		name: 'LeonInfinity',
 		role: 'In-Game Development, XR Controls, Networking',
-		imageUrl: leon,
+		imageUrl: "/static/leon-pfp.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Rose932',
 		role: 'In-Game Development, Creation Tools, API, XRUI, Web',
-		imageUrl: rose,
+		imageUrl: "/static/Rose932.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Bobrobot1',
 		role: 'CVRNet Development',
-		imageUrl: bobrobot1,
+		imageUrl: "/static/bobrobot1.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Keightie',
 		role: 'XR Development',
-		imageUrl: keightie,
+		imageUrl: "/static/keightie.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'jai',
 		role: 'API Assistance, Kotlin',
-		imageUrl: jai,
+		imageUrl: "/static/jai.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  },
 	  {
 		name: 'Zoey',
 		role: 'API Development, Golang',
-		imageUrl: zoey,
+		imageUrl: "/static/zoey.webp",
 		twitterUrl: '#',
 		discordUrl: '#',
 	  }
@@ -80,11 +68,11 @@ const blogPosts = [
 		date: 'May 22, 2022',
 		datetime: '2022-05-22',
 		category: { name: 'News', href: '#' },
-		imageUrl: ominousRose,
+		imageUrl: "/static/ominous-rose.webp",
 		preview: "It has come to our attention that our servers have been hit by a Distributed Denial of Service attack. This is a serious issue and we are currently working to resolve it.",
 		author: {
 			name: 'LeonInfinity',
-			imageUrl: leon,
+			imageUrl: "/static/leon-pfp.webp",
 			href: '#',
 		},
 		readingLength: '2 min',
@@ -124,17 +112,17 @@ function MainBanner() {
 					game:</p>
 				<div className="flex justify-center w-full pb-24 md:justify-start lg:pb-0 fade-in glow">
 					<a href="https://leonto-gamer.itch.io/compensation-vr">
-						<img fetchpriority="high" src={itchIo} alt="" className="h-12 pr-4" width="171" h="48"/>
+						<img fetchpriority="high" src="/static/itch-io.svg" alt="" className="h-12 pr-4" width="171" h="48"/>
 					</a>
 					<a href="https://sidequestvr.com/app/6232/compensation-vr">
-						<img fetchpriority="high" src={sidequest} alt="" className="h-12" width="162" h="48" />
+						<img fetchpriority="high" src="/static/sidequest.webp" alt="" className="h-12" width="162" h="48" />
 					</a>
 				</div>
 
 			</div>
 
 			<div className="w-full overflow-y-hidden xl:w-3/5">
-				<img fetchpriority="high" className="hidden w-5/6 mx-auto lg:mr-0 md:block" alt="" src={banner} width="616" height="616"/>
+				<img fetchpriority="high" className="hidden w-5/6 mx-auto lg:mr-0 md:block" alt="" src="/static/banner.webp" width="616" height="616"/>
 			</div>
 		</div>
 	);
@@ -156,7 +144,7 @@ function GamePresentation() {
 				</div>
 				<div className="mt-12">
 					<img loading="lazy" className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-						src={friendlyRose} alt="" width="1216" height="684"/>
+						src="/static/friendly-rose.webp" alt="" width="1216" height="684"/>
 				</div>
 			</div>
 		</div>
@@ -172,7 +160,7 @@ function Testimonials() {
 					<div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
 						<div className="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
 							<img loading="lazy" className="object-cover lg:h-full lg:w-full"
-								src={ravenMusk} alt="" />
+								src="/static/raven-musk.webp" alt="" />
 						</div>
 					</div>
 				</div>

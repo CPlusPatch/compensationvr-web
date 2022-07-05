@@ -48,10 +48,7 @@ const navigation = {
   
 export default function Footer() {
 	return (
-		<footer aria-labelledby="footer-heading" className="font-exo">
-			<h2 id="footer-heading" className="sr-only">
-				Footer
-			</h2>
+		<div className="font-exo">
 			<div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
 				<div className="xl:grid xl:grid-cols-3 xl:gap-8">
 					<div className="grid grid-cols-2 gap-8 xl:col-span-2">
@@ -115,20 +112,18 @@ export default function Footer() {
 						<p className="mt-4 text-base text-gray-300">
 							This option is not available yet
 						</p>
-						<form className="mt-4 sm:flex sm:max-w-md">
-							<label htmlFor="email-address" className="sr-only">
+						{/* <form className="mt-4 sm:flex sm:max-w-md">
+							<label className="sr-only">
 								Email address
 							</label>
-							<input type="email" name="email-address" id="email-address" autoComplete="email" required
-								className="w-full min-w-0 px-4 py-2 text-base text-gray-900 bg-gray-400 border border-transparent rounded-md shadow-md appearance-none cursor-not-allowed"
-								disabled="disabled"/>
+							<input type="email" name="email" autoComplete="email" required="" className="w-full min-w-0 px-4 py-2 text-base text-gray-900 bg-gray-400 border border-transparent rounded-md shadow-md appearance-none cursor-not-allowed" disabled=""/>
 							<div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
 								<button type="submit"  disabled="disabled"
 									className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-gray-400 border border-transparent rounded-md shadow-md cursor-not-allowed">
 									Subscribe
 								</button>
 							</div>
-						</form>
+						</form> */}
 					</div>
 				</div>
 				<div className="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
@@ -145,6 +140,6 @@ export default function Footer() {
 					</p>
 				</div>
 			</div>
-		</footer>
+		</div>
 	);
 };
